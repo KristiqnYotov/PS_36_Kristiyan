@@ -12,10 +12,9 @@
         <Label x:Name="lblName" Content="Име :" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top" Width="79" FontSize="20"/>
         <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="25" Margin="89,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="142" FontSize="16"/>
         <Label x:Name="lblName1" Content="Име :" HorizontalAlignment="Left" Margin="10,143,0,0" VerticalAlignment="Top" Width="79" FontSize="20"/>
-        <TextBox x:Name="txtName1" HorizontalAlignment="Left" Height="25" Margin="89,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="142" FontSize="16"/>
+        <TextBox x:Name="txtName1" HorizontalAlignment="Left" Height="25" Margin="89,154,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="142" FontSize="16"/>
         <Label x:Name="lblName2" Content="Име :" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="79" FontSize="20"/>
         <TextBox x:Name="txtName2" HorizontalAlignment="Left" Height="25" Margin="89,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="142" FontSize="16"/>
-        <TextBlock x:Name="txt22" HorizontalAlignment="Right" Background="Bisque" TextWrapping="Wrap" Text="Heresy" VerticalAlignment="Center"/>
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial
 Black">
 I edit XAML myself!
@@ -26,6 +25,16 @@ I edit XAML myself!
         <GroupBox HorizontalAlignment="Left" Height="235" VerticalAlignment="Top" Width="292">
 
         </GroupBox>
+        <ListBox x:Name="peopleListBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="639,81,64,149">
+            <ListBoxItem Content="Mike"/>
+            <ListBoxItem Content="Lisa"/>
+            <ListBoxItem Content="John"/>
+            <ListBoxItem Content="Mary"/>
+
+        </ListBox>
+        <Button VerticalAlignment="Bottom" Click="btnGreed_Click" Margin="639,0,64,111" Height="33">
+            Greeting
+        </Button>
 
     </Grid>
 </Window>
