@@ -8,44 +8,33 @@
         Title="ExpenseIt-Home" Height="450" Width="800">
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
 
-        <Grid.Background>
+
+            <Grid.Background>
             <ImageBrush ImageSource="watermark.png"/>
         </Grid.Background>
-
-
-
-        <Grid Grid.Column="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="230"/>
-            </Grid.ColumnDefinitions >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition />
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-
-
-
-            <Label Grid.Column="1" 
-                    Content="{Binding RelativeSource={RelativeSource AncestorType=
-                    {x:Type Window}}, Path=MainCaptionText}"></Label>
-
-            <Border Height="35" Padding="5" Background="#4E87D4">
-                <Label VerticalAlignment="Center" Grid.Column="1" Grid.Row="0" Foreground="White">Names</Label>
-            </Border>
-            <ListBox Grid.Column="1" Grid.Row="1" Name="peopleListBox" ItemsSource="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}, Path=ExpenseDataSource}">
-            </ListBox>
-
-            <Button Grid.Column="1" Grid.Row="2" Width="125" Height="25" HorizontalAlignment="Right" Margin="0,10,0,0" Click="View_Expences" Content="{Binding ElementName=peopleListBox,
-                Path=SelectedItem.Name}" ></Button>
-
-
-        </Grid>
-        <Label Grid.Column="0" Grid.Row="3" Content="{Binding Path=LastChecked}"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="230" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40" />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <!-- People list -->
+        <Label Grid.Column="0" Grid.Row="3" Width="120" Height="30" Content="{Binding Path=LastChecked}"/>
+        <Label Grid.Column="1" Content="{Binding RelativeSource={RelativeSource AncestorType= {x:Type Window}}, Path=MainCaptionText}"></Label>
+        <Label VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" Foreground="White" Height="35" Padding="5" Background="#4E87D4">Names</Label>
+        <ListBox Grid.Column="0" Grid.Row="2" ItemsSource="{Binding Path=PersonsChecked}"></ListBox>
+        <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2" SelectionChanged="peopleListBox_SelectionChanged_1" ItemsSource="{Binding RelativeSource= {RelativeSource AncestorType={x:Type Window}}, Path=ExpenseDataSource}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Label Content="{Binding Path=Name}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Margin="0,10,0,0" Grid.Column="1" Grid.Row="3" Width="125" Height="25" HorizontalAlignment="Right" Click="View_Expences" Content="{Binding ElementName=peopleListBox, Path=SelectedItem.Name}"></Button>
     </Grid>
 </Window>

@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFHello", "WPFHello\WPFHel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseIt", "Expenselt\ExpenseIt.csproj", "{A1DD1779-B4BE-4A2F-ADF1-6D165CBF4D10}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfExample", "WpfExample\WpfExample.csproj", "{ED5310F9-C5C0-4E44-A162-613AA0195149}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyMVVM", "EasyMVVM\EasyMVVM.csproj", "{775D7575-00EE-40F5-9233-C2D37A08BF18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{A1DD1779-B4BE-4A2F-ADF1-6D165CBF4D10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1DD1779-B4BE-4A2F-ADF1-6D165CBF4D10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1DD1779-B4BE-4A2F-ADF1-6D165CBF4D10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED5310F9-C5C0-4E44-A162-613AA0195149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED5310F9-C5C0-4E44-A162-613AA0195149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED5310F9-C5C0-4E44-A162-613AA0195149}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED5310F9-C5C0-4E44-A162-613AA0195149}.Release|Any CPU.Build.0 = Release|Any CPU
+		{775D7575-00EE-40F5-9233-C2D37A08BF18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{775D7575-00EE-40F5-9233-C2D37A08BF18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{775D7575-00EE-40F5-9233-C2D37A08BF18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{775D7575-00EE-40F5-9233-C2D37A08BF18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
